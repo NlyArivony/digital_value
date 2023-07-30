@@ -14,6 +14,9 @@ app.use(express.json());
 // Route to get all categories
 app.get('/api/categories', categoriesController.getAllCategories);
 
+// Route to get all categories
+app.get('/api/categoriesTrees', categoriesController.getAllCategoriesWithStructure);
+
 // Start the server
 app.listen(port, () => {
     console.log(`Server is running on http://localhost:${port}`);

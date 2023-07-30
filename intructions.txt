@@ -5,8 +5,8 @@
 │   └── categoriesController.js
 ├── models
 │   └── categoriesModel.js
-│   └── categoriesModel.js
-│   └── categoriesModel.js
+│   └── categoriesClosureModel.js
+│   └── volumesModel.js
 ├── serializers
 │   └── categoriesSerializer.js
 ├── swagger_output.json
@@ -14,7 +14,7 @@
 ├── swagger.js (this will generate package_output.json)
 
 # clone the project
--> git clone https://github.com/NlyArivony/digital_value
+-> git clone https://github.com/NlyArivony/digital_value.git
 
 # install dependencies on package.json
 -> npm install
@@ -22,5 +22,5 @@
 # run app
 -> node index.js
 
-# swagger doc is available on:
+# Swagger doc to test the API's endpoints is available at:
 http://localhost:3000/api-docs/
