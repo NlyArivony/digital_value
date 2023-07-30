@@ -2,14 +2,18 @@
   "name": "backend-challenge",
   "version": "0.0.1",
   "description": "Digital Value backend challenge",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
   "license": "MIT",
   "dependencies": {
-    "sqlite": "^4.1.1",
-    "sqlite3": "^5.0.8",
-    "ts-node": "^10.8.1",
-    "typescript": "^4.7.4"
-  },
-  "devDependencies": {
-    "@types/sqlite3": "^3.1.8"
+    "express": "^4.18.2",
+    "sequelize": "^6.32.1",
+    "sqlite3": "^5.1.6",
+    "swagger-autogen": "^2.23.5",
+    "swagger-ui-express": "^5.0.0"
   }
 }

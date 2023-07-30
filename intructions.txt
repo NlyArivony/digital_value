@@ -1,0 +1,26 @@
+# project-structure
+└── db.sqlite
+└── database.js
+├── controllers
+│   └── categoriesController.js
+├── models
+│   └── categoriesModel.js
+│   └── categoriesModel.js
+│   └── categoriesModel.js
+├── serializers
+│   └── categoriesSerializer.js
+├── swagger_output.json
+├── index.js (this will run the app and use swagger_output.json for the docs)
+├── swagger.js (this will generate package_output.json)
+
+# clone the project
+-> git clone https://github.com/NlyArivony/digital_value
+
+# install dependencies on package.json
+-> npm install
+
+# run app
+-> node index.js
+
+# swagger doc is available on:
+http://localhost:3000/api-docs/
