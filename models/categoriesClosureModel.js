@@ -1,5 +1,5 @@
-const { DataTypes } = require('sequelize');
-const sequelize = require('./sequelize'); // Import the Sequelize connection
+const { Sequelize, DataTypes } = require('sequelize');
+const sequelize = require('../database');
 
 const CategoriesClosure = sequelize.define(
     'categories_closure', // Model name
@@ -15,15 +15,13 @@ const CategoriesClosure = sequelize.define(
     },
     {
         tableName: 'categories_closure', // Actual table name
-        timestamps: false,
-        // Optional: Add indexes if needed
-        // indexes: [
-        //     {
-        //         unique: false,
-        //         fields: ['ancestor_id', 'descendant_id'],
-        //     },
-        // ],
+        timestamps: false
     }
 );
+
+// Define the association between CategoriesClosure and Categories
+const Categories = require('./categoriesModel');
+Categories.hasMany(CategoriesClosure, { foreignKey: 'ancestor_id', sourceKey: 'id', as: 'ancestor' });
+Categories.hasMany(CategoriesClosure, { foreignKey: 'descendant_id', sourceKey: 'id', as: 'descendant' });
 
 module.exports = CategoriesClosure;

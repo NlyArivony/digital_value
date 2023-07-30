@@ -14,7 +14,7 @@ app.use(express.json());
 // Route to get all categories
 app.get('/api/categories', categoriesController.getAllCategories);
 
-// Route to get all categories
+// Route to get all categories with trees of parent and children
 app.get('/api/categoriesTrees', categoriesController.getAllCategoriesWithStructure);
 
 // Start the server

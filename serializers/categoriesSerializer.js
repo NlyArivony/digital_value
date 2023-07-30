@@ -6,9 +6,16 @@ const baseSerializeCategories = (category) => {
     };
 };
 
-// Serializer function to format categories with children for API responses
-const serializeCategoriesWithChildren = (category) => {
+// Serializer function to format categories with children and ancestors for API responses
+const serializeCategoriesWithStructure = (category) => {
     const serializedCategory = baseSerializeCategories(category);
+
+    if (category.ancestors) {
+        serializedCategory.ancestors = category.ancestors.map((ancestor) => ({
+            id: ancestor.id,
+            name: ancestor.name,
+        }));
+    }
 
     if (category.children) {
         serializedCategory.children = category.children.map((child) => ({
@@ -22,5 +29,5 @@ const serializeCategoriesWithChildren = (category) => {
 
 module.exports = {
     serializeCategories: baseSerializeCategories,
-    serializeCategoriesWithChildren: serializeCategoriesWithChildren,
+    serializeCategoriesWithStructure: serializeCategoriesWithStructure,
 };
