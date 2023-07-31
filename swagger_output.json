@@ -11,7 +11,7 @@
     "http"
   ],
   "paths": {
-    "/api/categories": {
+    "/categories": {
       "get": {
         "description": "",
         "responses": {
@@ -24,7 +24,7 @@
         }
       }
     },
-    "/api/categoriesTrees": {
+    "/categories/trees": {
       "get": {
         "description": "",
         "responses": {
@@ -33,6 +33,24 @@
           },
           "500": {
             "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/categories/{categoryId}/average": {
+      "get": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "categoryId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": ""
           }
         }
       }

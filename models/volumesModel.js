@@ -1,5 +1,5 @@
 const { DataTypes } = require('sequelize');
-const sequelize = require('./sequelize'); // Import the Sequelize connection
+const sequelize = require('../database');
 
 const Volumes = sequelize.define(
     'volumes', // Model name
@@ -20,13 +20,6 @@ const Volumes = sequelize.define(
     {
         tableName: 'volumes', // Actual table name
         timestamps: false,
-        // Optional: Add indexes if needed
-        // indexes: [
-        //   {
-        //     unique: false,
-        //     fields: ['category_id', 'date'],
-        //   },
-        // ],
     }
 );
 

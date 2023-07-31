@@ -3,6 +3,7 @@
 └── database.js
 ├── controllers
 │   └── categoriesController.js
+│   └── volumesController.js
 ├── models
 │   └── categoriesModel.js
 │   └── categoriesClosureModel.js
@@ -23,4 +24,4 @@
 -> node index.js
 
 # Swagger doc to test the API's endpoints is available at:
-http://localhost:3000/api-docs/
+http://localhost:3000/docs/
