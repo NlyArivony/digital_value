@@ -10,6 +10,7 @@
 │   └── volumesModel.js
 ├── serializers
 │   └── categoriesSerializer.js
+│   └── volumesSerializer.js
 ├── swagger_output.json
 ├── index.js (this will run the app and use swagger_output.json for the docs)
 ├── swagger.js (this will generate package_output.json)
@@ -17,7 +18,7 @@
 # clone the project
 -> git clone https://github.com/NlyArivony/digital_value.git
 
-# install dependencies on package.json
+# install dependencies in package.json
 -> npm install
 
 # run app
